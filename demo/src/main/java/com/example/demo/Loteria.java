@@ -32,9 +32,13 @@ public class Loteria {
     }
 
     public static double calcularPremio(int acertos, double valor) {
-        if (acertos == 4) return valor * 2;
-        if (acertos == 5) return valor * 5;
-        if (acertos == 6) return valor * 10;
+        if (acertos == 6) {
+            return valor * 10;
+        } else if (acertos == 5) {
+            return valor * 5;
+        } else if (acertos == 4) {
+            return valor * 2;
+        }
         return 0.0;
     }
 }
