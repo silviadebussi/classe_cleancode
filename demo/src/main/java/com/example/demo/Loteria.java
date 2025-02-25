@@ -6,16 +6,16 @@ import java.util.Random;
 
 public class Loteria {
 
-    private static final int QUANTIDADE_NUMEROS = 6;
+    private static final int quantidadeNumeros = 6;
 
     public static List<Integer> gerarNumerosAleatorios() {
         Random random = new Random();
         List<Integer> numerosSorteados = new ArrayList<>();
 
-        while (numerosSorteados.size() < QUANTIDADE_NUMEROS) {
-            int num = random.nextInt(60) + 1;
-            if (!numerosSorteados.contains(num)) {
-                numerosSorteados.add(num);
+        while (numerosSorteados.size() < quantidadeNumeros) {
+            int numero = random.nextInt(60) + 1;
+            if (!numerosSorteados.contains(numero)) {
+                numerosSorteados.add(numero);
             }
         }
         return numerosSorteados;
